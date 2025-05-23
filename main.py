@@ -3,10 +3,13 @@ import os
 from aiogram import Bot, Dispatcher, executor, types
 from steps import steps
 
+print("🟢 Бот стартует...")
+
+logging.basicConfig(level=logging.INFO)
+
 API_TOKEN = os.getenv("TOKEN")
 CHANNEL_USERNAME = os.getenv("CHANNEL_USERNAME")
 
-logging.basicConfig(level=logging.INFO)
 bot = Bot(token=API_TOKEN)
 dp = Dispatcher(bot)
 
